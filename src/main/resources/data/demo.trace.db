@@ -1,0 +1,4 @@
+2020-11-09 23:24:08 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Значение слишком длинное для поля "MINI_NEWS VARCHAR(255)": "STRINGDECODE('\u0422\u0440\u0435\u043d\u0435\u0440 \u0438 \u0445\u043e\u0440\u0435\u043e\u0433\u0440\u0430\u0444 \u0414\u0430\u0... (290)"
+Value too long for column "MINI_NEWS VARCHAR(255)": "STRINGDECODE('\u0422\u0440\u0435\u043d\u0435\u0440 \u0438 \u0445\u043e\u0440\u0435\u043e\u0433\u0440\u0430\u0444 \u0414\u0430\u0... (290)"; SQL statement:
+insert into news_entity (image, mini_news, content, title, id) values (?, ?, ?, ?, ?) [22001-200]

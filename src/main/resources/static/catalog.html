@@ -1,0 +1,84 @@
+<html>
+<head>
+    <meta charset="UTF8">
+    <title>Каталог товаров</title>
+    <link href="css/styles.css" rel="stylesheet" type="text/css" media="screen">
+</head>
+<body>
+ 
+<div class="ad">
+    <img src="/img/bg.png" >
+</div>
+<div class="adRight">
+    <img src="/img/bg.png" >
+</div>
+
+<div class="menu">
+
+<ul>
+    <li><a href="index">Главная</a></li>
+    <li><a href="catalog">Каталог товаров</a></li>
+    <li><a href="news">Новости</a></li>
+
+
+
+
+</ul>
+</div>
+
+<button class="open-button" onclick="openForm()"><img src="/img/cart.png"> </button>
+
+<div class="form-popup" id="myForm">
+    <form action="/buyPage" class="form-container" method="GET">
+        <h1>Корзина</h1>
+<table id="table-cart">
+
+</table>
+<div class="cart-button">
+
+    Общая сумма <br>
+    <span><input type="text" id="cart-sum" name="allPrice" readonly>$</span>
+    <button type="submit" class="btn" onclick="buy()">Оплата</button>
+<!--        <button type="button" class="btn cancel" onclick="openForm()">Закрыть</button>-->
+</div>
+    </form>
+</div>
+
+<div class="content">
+ <div class="catalog">
+<table id="catalogTable">
+    <tr>
+        <th colspan="2">Модель</th>
+        <th>Цена</th>
+        <th>Количество</th>
+        
+      </tr>
+   
+</table>
+
+ </div>
+
+</div>
+
+</div>
+<script src="js/cart.js"></script>
+
+<script src="js/script.js">
+
+</script>
+<script>
+    table=document.getElementById("catalogTable");
+    qq(table);
+</script>
+
+</body>
+<footer>
+    <div id="footer">
+        <p> 2020.</p>
+        <p>Капустин Даниил | <a href="#">4-15 ПКС</a></p>
+        <p><a href="/adminPanel">Админ панель</a></p>
+
+    </div>
+
+</footer>
+</html>

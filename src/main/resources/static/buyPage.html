@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Оплата</title>
+</head>
+<link href="css/styles.css" rel="stylesheet" type="text/css" media="screen">
+
+<body>
+<div class="content">
+    <h1>Оплата</h1>
+<form action="/buy" method="POST">
+    <label for="allPrice">Сумма покупки</label>
+<input type="text" readonly id="allPrice">
+<input type="submit" value="Оплатить">
+</form>
+<script src="/js/cart.js"></script>
+
+<script>
+function getUrlVars() {
+    var vars = {};
+    var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+        vars[key] = value;
+    });
+    return vars;
+}
+
+var allPrice = getUrlVars()["allPrice"];
+document.getElementById("allPrice").value = allPrice+"$";
+</script>
+</div>
+</body>
+<footer>
+    <div id="footer">
+        <p> 2020.</p>
+        <p>Капустин Даниил | <a href="#">4-15 ПКС</a></p>
+        <p><a href="/adminPanel">Админ панель</a></p>
+
+    </div>
+
+</footer>
+</html>
