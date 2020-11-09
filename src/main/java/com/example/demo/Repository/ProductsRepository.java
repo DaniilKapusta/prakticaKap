@@ -17,5 +17,4 @@ public interface ProductsRepository extends CrudRepository<ProductEntity, Long> 
     @Query(value = "UPDATE PRODUCT_ENTITY SET product_Count = :uppProductCount WHERE ID = :id", nativeQuery = true)
   public void updateProductCountById(@Param("id") Long id, @Param("uppProductCount") Integer uppProductCount);
 
-   // public ProductEntity addProduct(ProductEntity productEntity);
 }
